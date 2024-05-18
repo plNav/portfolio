@@ -1,0 +1,55 @@
+---
+import { TAGS } from "../constants/Tags.js";
+import Tag from "./Tag.astro";
+const LANGUAGE_SKILLS = [
+    TAGS.JAVASCRIPT,
+    TAGS.TYPESCRIPT,
+    TAGS.DART,
+    TAGS.CSHARP,
+    TAGS.JAVA,
+    TAGS.KOTLIN,
+    TAGS.SWIFT,
+];
+const FRAMEWRK_SKILLS: string[] = [
+    "FLUTTER",
+    "ANGULAR",
+    "REACT",
+    "WPF",
+    "KOTLIN MULTIPLATFORM",
+    "SWIFT UI",
+    "EXPRESS",
+    "SPRING",
+    "HIBERNATE",
+];
+const SOCIALSF_SKILLS: string[] = [
+    "COMUNICACIÓN",
+    "COMPAÑERISMO",
+    "RESOLUCION",
+    "ESTRUCTURACION",
+    "APRENDIZAJE",
+];
+const SOFTWARE_SKILLS: string[] = [
+    "GIT",
+    "GITHUB",
+    "BASH/ZSH",
+    "POWERSHELL",
+    "DOCKER",
+    "MYSQL",
+    "MONGODB",
+    "HTML",
+    "CSS",
+];
+---
+
+<div>
+    <h3 class="text-xl font-semibold my-2">Lenguajes</h3>
+    <ul class="flex gap-x-4 flex-row flex-wrap">
+        {
+            LANGUAGE_SKILLS.map((skill) => (
+                <Tag name={skill.name}>
+                    <skill.icon class="size-5" />
+                </Tag>
+            ))
+        }
+    </ul>
+</div>

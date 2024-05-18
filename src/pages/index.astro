@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import Badge from "../components/Badge.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import GitHub from "../icons/GitHub.astro";
@@ -11,6 +10,10 @@ import SectionContainer from "../components/SectionContainer.astro";
 import Briefcase from "../icons/Briefcase.astro";
 import Code from "../icons/Code.astro";
 import Projects from "../components/Projects.astro";
+import Skills from "../components/Skills.astro";
+import SkillsIcon from "../icons/SkillsIcon.astro";
+import ProjectsIcon from "../icons/ProjectsIcon.astro";
+import Copy from "../icons/Copy.astro";
 ---
 
 <Layout
@@ -20,8 +23,8 @@ import Projects from "../components/Projects.astro";
 	<main class="px-4">
 		<SectionContainer id="top" class="py-44 pb-44">
 			<img
-				class="rounded-full size-20 mb-8"
-				src="https://pics.craiyon.com/2023-10-28/22528cc76e05479c8a48718f47a2de23.webp"
+				class="rounded-full size-40 mb-8"
+				src="/projects/pablopic.webp"
 				alt="pablo photo"
 			/>
 			<h1
@@ -57,10 +60,20 @@ import Projects from "../components/Projects.astro";
 					GitHub
 				</SocialPill>
 
-				<SocialPill href="https://linkedin.com">
-					<Mail class="size-4 lg:size-6" />
-					pav.dev3@gmail.com
-				</SocialPill>
+				<div id="mailButton">
+					<SocialPill href="#">
+						<Mail class="size-4 lg:size-6" />
+						pav.dev3@gmail.com
+					</SocialPill>
+				</div>
+				<div
+					id="copyButton"
+					class="rounded-full border border-white/10 flex justify-center items-center gap-x-2
+				py-1 px-2 lg:py-2 lg:px-4 text-xs lg:text-base bg-white/5 hover:scale-110 hover:bg-white/10 transition"
+				>
+					<Copy class="size-4 lg:size-6" />
+					<Mail class="size-2 lg:size-4" />
+				</div>
 			</nav>
 		</SectionContainer>
 
@@ -72,6 +85,14 @@ import Projects from "../components/Projects.astro";
 			<Experience />
 		</SectionContainer>
 
+		<SectionContainer id="skills">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<SkillsIcon class="size-7" />
+				HABILIDADES
+			</h2>
+			<Skills />
+		</SectionContainer>
+
 		<SectionContainer id="projects">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Code class="size-7" />
@@ -79,5 +100,34 @@ import Projects from "../components/Projects.astro";
 			</h2>
 			<Projects />
 		</SectionContainer>
+
 	</main>
 </Layout>
+
+<script>
+	document.addEventListener("DOMContentLoaded", () => {
+		const mailButton = document.getElementById("mailButton");
+		const copyButton = document.getElementById("copyButton");
+
+		if (mailButton) {
+			mailButton.addEventListener("click", () => {
+				window.location.href = "mailto:pav.dev3@gmail.com";
+			});
+		}
+
+		if (copyButton) {
+			copyButton.addEventListener("click", () => {
+				navigator.clipboard
+					.writeText("pav.dev3@gmail.com")
+					.then(() => {
+						alert(
+							"Email copiado al portapapeles\n pav.dev3@gmail.com",
+						);
+					})
+					.catch((err) => {
+						console.error("Error al copiar email: ", err);
+					});
+			});
+		}
+	});
+</script>

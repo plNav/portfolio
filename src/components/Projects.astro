@@ -1,18 +1,6 @@
 ---
-import Flutter from "../icons/Flutter.astro";
-import TailWind from "../icons/Tailwind.astro";
-const TAGS = {
-    FLUTTER: {
-        name: "Flutter",
-        class: "bg-black text-white",
-        icon: Flutter,
-    },
-    TAILWIND: {
-        name: "Tailwind",
-        class: "bg-white text-[#73bcf6]",
-        icon: TailWind,
-    },
-};
+import { TAGS } from "../constants/Tags.js";
+import Tag from "./Tag.astro";
 const PROJECTS = [
     {
         title: "Project 1",
@@ -51,12 +39,7 @@ const PROJECTS = [
             <p class="text-lg mb-4 text-pretty">{description}</p>
             <ul class="flex gap-x-2 flex-row">
                 {tags.map((tag) => (
-                    <li>
-                      <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
-                        <tag.icon class="size-6"/>
-                        {tag.name}
-                      </span>
-                        </li>
+                    <Tag name={tag.name}>{<tag.icon class="size-5" />}</Tag>
                 ))}
             </ul>
             <img
