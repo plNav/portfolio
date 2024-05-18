@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+    {
+        date: "Actualmente...",
+        title: "Project Leader en Sistemas Informáticos del Mediterráneo",
+        description:
+            `Empecé manteniendo código legacy de aplicaciones en Java 
+            (para android con XML Views y Spring en backend) y me encuentro
+             actualmente terminando de rehacerlas en tecnologias mas modernas
+             y presentarlas a los clientes como comercial.`,
+        link: "#",
+    },
+    {
+        date: "Junio 2021",
+        title: "Fin FP Desarrollo Aplicaciones Multiplataforma",
+        description: "En IES PereMaria Orts y Bosh, con prácticas de empresa.",
+    },
+];
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map((experience) => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>

@@ -1,0 +1,69 @@
+---
+import Flutter from "../icons/Flutter.astro";
+import TailWind from "../icons/Tailwind.astro";
+const TAGS = {
+    FLUTTER: {
+        name: "Flutter",
+        class: "bg-black text-white",
+        icon: Flutter,
+    },
+    TAILWIND: {
+        name: "Tailwind",
+        class: "bg-white text-[#73bcf6]",
+        icon: TailWind,
+    },
+};
+const PROJECTS = [
+    {
+        title: "Project 1",
+        description:
+            "lorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfd",
+        link: "#",
+        github: "#",
+        image: "/projects/screenshot_optimized.webp",
+        tags: [TAGS.FLUTTER, TAGS.TAILWIND],
+    },
+    {
+        title: "Project 2",
+        description:
+            "lorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfd ",
+        link: "#",
+        github: "#",
+        image: "/projects/screenshot_optimized.webp",
+        tags: [TAGS.FLUTTER, TAGS.TAILWIND],
+    },
+    {
+        title: "Project 3",
+        description:
+            "lorem ipsum.....as asdf f asdfd orem ipsum.....as asdf f asdfd orem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfd",
+        link: "#",
+        github: "#",
+        image: "/projects/screenshot_optimized.webp",
+        tags: [TAGS.FLUTTER, TAGS.TAILWIND],
+    },
+];
+---
+
+{
+    PROJECTS.map(({ title, description, tags, image }) => (
+        <article>
+            <h3 class="text-2xl font-semibold mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                      <span class={`flex gap-x-2 rounded-full text-sm ${tag.class} py-1 px-2`}>
+                        <tag.icon class="size-6"/>
+                        {tag.name}
+                      </span>
+                        </li>
+                ))}
+            </ul>
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt={`Captura de pantalla del proyecto ${title}`}
+            />
+        </article>
+    ))
+}

@@ -1,0 +1,83 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
+import Mail from "../icons/Mail.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Briefcase from "../icons/Briefcase.astro";
+import Code from "../icons/Code.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+	title="Pablo L Portfolio. Desarrollador y programador multiplataforma."
+	description="Contrata a Pablo para desarrollar aplicaciones y liderar proyectos."
+>
+	<main class="px-4">
+		<SectionContainer id="top" class="py-44 pb-44">
+			<img
+				class="rounded-full size-20 mb-8"
+				src="https://pics.craiyon.com/2023-10-28/22528cc76e05479c8a48718f47a2de23.webp"
+				alt="pablo photo"
+			/>
+			<h1
+				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+			>
+				Hola! Soy Pablo
+				<a
+					href="https://linkedin.com/pablol"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar </Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+				<span>+3 años de experiencia.</span>
+				<span class="opacity-80">Desarrollador </span>
+				<span class="text-red-100/90">Multiplataforma, </span>
+				<span class="opacity-80">
+					especializado en crear aplicaciones únicas.</span
+				>
+			</h2>
+
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://linkedin.com">
+					<LinkedIn class="size-4 lg:size-6" />
+					LinkedIn
+				</SocialPill>
+
+				<SocialPill href="https://linkedin.com">
+					<GitHub class="size-4 lg:size-6" />
+					GitHub
+				</SocialPill>
+
+				<SocialPill href="https://linkedin.com">
+					<Mail class="size-4 lg:size-6" />
+					pav.dev3@gmail.com
+				</SocialPill>
+			</nav>
+		</SectionContainer>
+
+		<SectionContainer id="experience">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Briefcase class="size-7" />
+				Experiencia
+			</h2>
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<Code class="size-7" />
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
