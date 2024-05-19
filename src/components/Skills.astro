@@ -10,34 +10,38 @@ const LANGUAGE_SKILLS = [
     TAGS.KOTLIN,
     TAGS.SWIFT,
 ];
-const FRAMEWRK_SKILLS: string[] = [
-    "FLUTTER",
-    "ANGULAR",
-    "REACT",
-    "WPF",
-    "KOTLIN MULTIPLATFORM",
-    "SWIFT UI",
-    "EXPRESS",
-    "SPRING",
-    "HIBERNATE",
+const FRAMEWRK_SKILLS = [
+    TAGS.FLUTTER,
+    TAGS.ANGULAR,
+    TAGS.REACT,
+    TAGS.ASTRO,
+
+    TAGS.COMPOSE,
+    TAGS.SWIFTUI,
+    TAGS.EXPRESS,
+    TAGS.SPRING,
+    TAGS.TAILWIND,
 ];
-const SOCIALSF_SKILLS: string[] = [
-    "COMUNICACIÓN",
-    "COMPAÑERISMO",
-    "RESOLUCION",
-    "ESTRUCTURACION",
-    "APRENDIZAJE",
+const SOCIALSF_SKILLS = [
+    TAGS.FLEXIBILITY,
+    TAGS.TEAMWORK,
+    TAGS.INITIATIVE,
+    TAGS.CRITIC,
+    TAGS.PROBLEMRES,
+    TAGS.LEARN,
 ];
-const SOFTWARE_SKILLS: string[] = [
-    "GIT",
-    "GITHUB",
-    "BASH/ZSH",
-    "POWERSHELL",
-    "DOCKER",
-    "MYSQL",
-    "MONGODB",
-    "HTML",
-    "CSS",
+const SOFTWARE_SKILLS = [
+    TAGS.MYSQL,
+    TAGS.MONGODB,
+    TAGS.DOCKER,
+    TAGS.LINUX,
+    TAGS.POWERSHELL,
+    TAGS.HTML,
+    TAGS.CSS,
+    TAGS.DENO,
+    TAGS.NODE,
+    TAGS.GIT,
+    TAGS.GITHUB,
 ];
 ---
 
@@ -46,6 +50,36 @@ const SOFTWARE_SKILLS: string[] = [
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
             LANGUAGE_SKILLS.map((skill) => (
+                <Tag name={skill.name}>
+                    <skill.icon class="size-5" />
+                </Tag>
+            ))
+        }
+    </ul>
+    <h3 class="text-xl font-semibold my-2 pt-6">Frameworks</h3>
+    <ul class="flex gap-x-4 flex-row flex-wrap">
+        {
+            FRAMEWRK_SKILLS.map((skill) => (
+                <Tag name={skill.name}>
+                    <skill.icon class="size-5" />
+                </Tag>
+            ))
+        }
+    </ul>
+    <h3 class="text-xl font-semibold my-2 pt-6">Soft Skills</h3>
+    <ul class="flex gap-x-4 flex-row flex-wrap">
+        {
+            SOCIALSF_SKILLS.map((skill) => (
+                <Tag name={skill.name}>
+                    <skill.icon class="size-5" />
+                </Tag>
+            ))
+        }
+    </ul>
+    <h3 class="text-xl font-semibold my-2 pt-6">Otros</h3>
+    <ul class="flex gap-x-4 flex-row flex-wrap">
+        {
+            SOFTWARE_SKILLS.map((skill) => (
                 <Tag name={skill.name}>
                     <skill.icon class="size-5" />
                 </Tag>
