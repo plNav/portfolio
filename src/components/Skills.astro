@@ -2,12 +2,12 @@
 import { TAGS } from "../constants/Tags.js";
 import Tag from "./Tag.astro";
 const LANGUAGE_SKILLS = [
-    TAGS.JAVASCRIPT,
-    TAGS.TYPESCRIPT,
     TAGS.DART,
-    TAGS.CSHARP,
     TAGS.JAVA,
     TAGS.KOTLIN,
+    TAGS.JAVASCRIPT,
+    TAGS.TYPESCRIPT,
+    TAGS.CSHARP,
     TAGS.SWIFT,
 ];
 const FRAMEWRK_SKILLS = [
@@ -15,11 +15,10 @@ const FRAMEWRK_SKILLS = [
     TAGS.ANGULAR,
     TAGS.REACT,
     TAGS.ASTRO,
-
     TAGS.COMPOSE,
     TAGS.SWIFTUI,
-    TAGS.EXPRESS,
     TAGS.SPRING,
+    TAGS.EXPRESS,
     TAGS.TAILWIND,
 ];
 const SOCIALSF_SKILLS = [
@@ -36,6 +35,7 @@ const SOFTWARE_SKILLS = [
     TAGS.DOCKER,
     TAGS.LINUX,
     TAGS.POWERSHELL,
+    TAGS.FIREBASE,
     TAGS.HTML,
     TAGS.CSS,
     TAGS.DENO,
@@ -46,7 +46,7 @@ const SOFTWARE_SKILLS = [
 ---
 
 <div>
-    <h3 class="text-xl font-semibold my-2">Lenguajes</h3>
+    <h3 class="text-xl font-semibold my-2 pt-6">Lenguajes</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
             LANGUAGE_SKILLS.map((skill) => (
@@ -56,7 +56,7 @@ const SOFTWARE_SKILLS = [
             ))
         }
     </ul>
-    <h3 class="text-xl font-semibold my-2 pt-6">Frameworks</h3>
+    <h3 class="text-xl font-semibold my-2 pt-12">Frameworks</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
             FRAMEWRK_SKILLS.map((skill) => (
@@ -66,7 +66,7 @@ const SOFTWARE_SKILLS = [
             ))
         }
     </ul>
-    <h3 class="text-xl font-semibold my-2 pt-6">Soft Skills</h3>
+    <h3 class="text-xl font-semibold my-2 pt-12">Soft Skills</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
             SOCIALSF_SKILLS.map((skill) => (
@@ -76,7 +76,7 @@ const SOFTWARE_SKILLS = [
             ))
         }
     </ul>
-    <h3 class="text-xl font-semibold my-2 pt-6">Otros</h3>
+    <h3 class="text-xl font-semibold my-2 pt-12">Otros</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
             SOFTWARE_SKILLS.map((skill) => (

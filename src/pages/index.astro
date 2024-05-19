@@ -20,7 +20,7 @@ import Copy from "../icons/Copy.astro";
 	title="Pablo L Portfolio. Desarrollador y programador multiplataforma."
 	description="Contrata a Pablo para desarrollar aplicaciones y liderar proyectos."
 >
-	<main class="px-4">
+	<main class="px-8">
 		<SectionContainer id="top" class="py-44 pb-44">
 			<img
 				class="rounded-full size-40 mb-8"
@@ -72,7 +72,7 @@ import Copy from "../icons/Copy.astro";
 				py-1 px-2 lg:py-2 lg:px-4 text-xs lg:text-base bg-white/5 hover:scale-110 hover:bg-white/10 transition"
 				>
 					<Copy class="size-4 lg:size-6" />
-					<Mail class="size-2 lg:size-4" />
+					<Mail class="size-4 lg:size-6" />
 				</div>
 			</nav>
 		</SectionContainer>
@@ -100,7 +100,6 @@ import Copy from "../icons/Copy.astro";
 			</h2>
 			<Projects />
 		</SectionContainer>
-
 	</main>
 </Layout>
 
@@ -111,7 +110,9 @@ import Copy from "../icons/Copy.astro";
 
 		if (mailButton) {
 			mailButton.addEventListener("click", () => {
-				window.location.href = "mailto:pav.dev3@gmail.com";
+				const subject = encodeURIComponent("Contacto Portfolio");
+				const email = "pav.dev3@gmail.com";
+				window.location.href = `mailto:${email}?subject=${subject}`;
 			});
 		}
 

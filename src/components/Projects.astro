@@ -3,41 +3,42 @@ import { TAGS } from "../constants/Tags.js";
 import Tag from "./Tag.astro";
 const PROJECTS = [
     {
-        title: "Project 1",
-        description:
-            "lorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfd",
-        link: "#",
-        github: "#",
-        image: "/projects/screenshot_optimized.webp",
-        tags: [TAGS.FLUTTER, TAGS.TAILWIND],
+        title: "Hexblem - Juego de Mesa",
+        description: `[En Desarrollo] Completamente multiplataforma, conectado a Firebase y una API en Node,
+             creado en Flutter usando el patrón BloC como gestor de estados.`,
+        link: null,
+        github: null,
+        image: "/projects/hexblem.webp",
+        tags: [TAGS.FLUTTER, TAGS.SWIFT, TAGS.KOTLIN, TAGS.FIREBASE, TAGS.NODE],
     },
     {
-        title: "Project 2",
-        description:
-            "lorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfd ",
-        link: "#",
-        github: "#",
+        title: "Baccus - TPV para CRM de Hoteles",
+        description: `Aplicación con muchísima funcionalidad para Android y Windows, usando 
+            Dart con C++ y Kotlin para crear PlatformChannels específicos. Está conectada a diferentes módulos de un backend en Java 
+            con Spring e Hibernate, con MySQL como Base de Datos, incluye diversos microservicios`,
+        link: null,
+        github: null,
         image: "/projects/screenshot_optimized.webp",
-        tags: [TAGS.FLUTTER, TAGS.TAILWIND],
+        tags: [TAGS.FLUTTER, TAGS.JAVA, TAGS.SPRING, TAGS.LINUX, TAGS.MYSQL],
     },
     {
-        title: "Project 3",
-        description:
-            "lorem ipsum.....as asdf f asdfd orem ipsum.....as asdf f asdfd orem ipsum.....as asdf f asdfdorem ipsum.....as asdf f asdfd",
+        title: "Illustrashop - App de Ventas",
+        description: `Creada en nativo para Android y Windows usando Kotlin Multiplatform y Node con MongoDBAtlas
+             para el backend y base de datos. Incluye pasarelas de pago con tarjeta e integraciones con PayPal y GooglePay`,
         link: "#",
         github: "#",
-        image: "/projects/screenshot_optimized.webp",
-        tags: [TAGS.FLUTTER, TAGS.TAILWIND],
+        image: "/projects/illustrashop.webp",
+        tags: [TAGS.KOTLIN, TAGS.COMPOSE, TAGS.MONGODB, TAGS.JAVA],
     },
 ];
 ---
 
 {
     PROJECTS.map(({ title, description, tags, image }) => (
-        <article>
+        <article class="pb-12">
             <h3 class="text-2xl font-semibold mb-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="flex gap-x-2 flex-row">
+            <p class="text-lg mb-4 text-pretty opacity-80">{description}</p>
+            <ul class="flex gap-x-2 flex-wrap">
                 {tags.map((tag) => (
                     <Tag name={tag.name}>{<tag.icon class="size-5" />}</Tag>
                 ))}
@@ -46,7 +47,7 @@ const PROJECTS = [
                 class="rounded shadow-2xl shadow-white/10"
                 src={image}
                 alt={`Captura de pantalla del proyecto ${title}`}
-            />  
+            />
         </article>
     ))
 }
