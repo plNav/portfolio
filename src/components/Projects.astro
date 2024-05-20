@@ -13,7 +13,7 @@ const PROJECTS = [
     },
     {
         title: "Baccus - TPV para CRM de Hoteles",
-        description: `Aplicación con muchísima funcionalidad para Android y Windows, usando 
+        description: `[En Producción] Aplicación con muchísima funcionalidad para Android y Windows, usando 
             Dart con C++ y Kotlin para crear PlatformChannels específicos. Está conectada a diferentes módulos de un backend en Java 
             con Spring e Hibernate, con MySQL como Base de Datos, incluye diversos microservicios`,
         link: null,
@@ -25,8 +25,8 @@ const PROJECTS = [
         title: "Illustrashop - App de Ventas",
         description: `Creada en nativo para Android y Windows usando Kotlin Multiplatform y Node con MongoDBAtlas
              para el backend y base de datos. Incluye pasarelas de pago con tarjeta e integraciones con PayPal y GooglePay`,
-        link: "#",
-        github: "#",
+        link: null,
+        github: null,
         image: "/projects/illustrashop.webp",
         tags: [TAGS.KOTLIN, TAGS.COMPOSE, TAGS.MONGODB, TAGS.JAVA],
     },
@@ -35,8 +35,8 @@ const PROJECTS = [
 
 {
     PROJECTS.map(({ title, description, tags, image }) => (
-        <article class="pb-12">
-            <h3 class="text-2xl font-semibold mb-2">{title}</h3>
+        <article class="pb-24">
+            <h3 class="text-2xl font-semibold mb-2 mt-8">{title}</h3>
             <p class="text-lg mb-4 text-pretty opacity-80">{description}</p>
             <ul class="flex gap-x-2 flex-wrap">
                 {tags.map((tag) => (
