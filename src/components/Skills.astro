@@ -45,13 +45,13 @@ const SOFTWARE_SKILLS = [
 ];
 ---
 
-<div>
+<div class="text-white">
     <h3 class="text-xl font-semibold my-2 pt-6">Lenguajes</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
             LANGUAGE_SKILLS.map((skill) => (
                 <Tag name={skill.name}>
-                    <skill.icon class="size-5" />
+                    <skill.icon class="size-5 text-white" />
                 </Tag>
             ))
         }
