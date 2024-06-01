@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-![screenshot](https://github.com/plNav/portfolio/assets/83410074/bfba03c8-41ef-4622-84a7-706079c06845)
+![screenshot](https://github.com/plNav/portfolio/assets/83410074/6ddc77ed-ba4e-468a-a864-196efb196838)
 
 Welcome to my personal portfolio! This project is built using Astro.js, a modern static site generator that brings together the best of the web frameworks to create fast and efficient websites.
 
