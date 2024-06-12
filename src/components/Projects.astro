@@ -6,7 +6,7 @@ const PROJECTS = [
         title: "Hexblem - Juego de Mesa",
         description: `[En Desarrollo] Completamente multiplataforma, conectado a Firebase y una API en Node,
              creado en Flutter usando el patrón BloC como gestor de estados.`,
-        link: null,
+        link: "https://hexblem.netlify.app",
         github: null,
         image: "/projects/hexblem.webp",
         tags: [TAGS.FLUTTER, TAGS.SWIFT, TAGS.KOTLIN, TAGS.FIREBASE, TAGS.NODE],
@@ -33,18 +33,56 @@ const PROJECTS = [
 ];
 ---
 
+<style>
+    .project-card {
+        background-color: #2a2a2a; /* Dark background */
+        color: #ffffff; /* White text */
+        border-radius: 12px; /* Rounded corners */
+        padding: 16px; /* Padding for content */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+        transition: transform 0.2s; /* Smooth hover effect */
+    }
+
+    .project-card:hover {
+        transform: scale(1.05); /* Slightly enlarge on hover */
+    }
+
+    .project-link {
+        color: #cc8e35; /* Bright blue for links */
+        text-decoration: underline; /* No underline */
+        font-weight: bold; /* Bold text */
+    }
+
+    .project-link:hover {
+        text-decoration: underline; /* Underline on hover */
+    }
+
+    .project-image {
+        border-radius: 12px; /* Rounded corners for image */
+        margin-top: 16px; /* Space between text and image */
+        width: 100%; /* Full width image */
+    }
+</style>
+
 {
-    PROJECTS.map(({ title, description, tags, image }) => (
-        <article class="pb-24">
-            <h3 class="text-2xl font-semibold mb-2 mt-8">{title}</h3>
+    PROJECTS.map(({ title, description, tags, image, link }) => (
+        <article class="project-card pb-10 mt-6 mb-4">
+            <h3 class="text-2xl font-semibold mb-2 mt-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty opacity-80">{description}</p>
             <ul class="flex gap-x-2 flex-wrap">
                 {tags.map((tag) => (
                     <Tag name={tag.name}>{<tag.icon class="size-5" />}</Tag>
                 ))}
             </ul>
+            {link && (
+                <p class="text-lg mb-4">
+                    <a href={link} target="_blank" class="project-link">
+                        Visítalo
+                    </a>
+                </p>
+            )}
             <img
-                class="rounded shadow-2xl shadow-white/10"
+                class="project-image rounded shadow-2xl shadow-white/10"
                 src={image}
                 alt={`Captura de pantalla del proyecto ${title}`}
             />
