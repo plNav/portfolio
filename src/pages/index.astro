@@ -17,8 +17,8 @@ import Copy from "../icons/Copy.astro";
 ---
 
 <Layout
-	title="Pablo L Portfolio. Desarrollador y Programador Multiplataforma."
-	description="Contrata a Pablo para desarrollar aplicaciones y liderar proyectos."
+	title="Pablo L Portfolio. Multiplatform Developer and Programmer."
+	description="Hire Pablo to build applications and lead projects."
 >
 	<main class="px-8">
 		<SectionContainer id="top" class="py-44 pb-44">
@@ -30,30 +30,30 @@ import Copy from "../icons/Copy.astro";
 			<h1
 				class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
 			>
-				¡Hola! Soy Pablo
+				Hi! I'm Pablo
 				<a
 					href="https://www.linkedin.com/in/pablo-l-navarro-6b20a5292"
 					target="_blank"
 					rel="noopener"
 					class="flex justify-center items-center"
 				>
-					<Badge>Disponible para trabajar </Badge>
+					<Badge>Available for work </Badge>
 				</a>
 			</h1>
 			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<span class="text-white opacity-80">Desarrollador </span>
-				<span class="text-red-100/80">Multiplataforma</span>
+				<span class="text-white opacity-80">Senior Mobile </span>
+				<span class="text-red-100/80">Engineer</span>
 			</span
 				>
 			</h2>
 			<h2 class="lg:text-xl text-white max-w-[700px] text-pretty">
-				<span class="opacity-80">Sigo disfrutando de aprender todo tipo de tecnologías Back y Front,
-					 durante mis 	<span class="text-yellow-100/75">más de 3 años de experiencia laboral</span> 
-					 he trabajado en el desarrollo de aplicaciones móviles, escritorio y web; 
-					 desde la <span class="text-red-100/80">formación</span> de los nuevos programadores 
-					 y el <span class="text-red-100/80">trabajo en equipo</span> hasta el 
-					 trato  <span class="text-red-100/80">comercial</span> con el cliente, siempre enfocado 
-					 en crear soluciones de alta calidad y gran experiencia de usuario. 
+				<span class="opacity-80">I still enjoy learning all kinds of back-end and front-end technologies.
+					 During my <span class="text-yellow-100/75">6+ years of professional experience</span>,
+					 I have worked on mobile, desktop, and web application development;
+					 from <span class="text-red-100/80">training</span> new developers
+					 and <span class="text-red-100/80">teamwork</span> to
+					 <span class="text-red-100/80">client-facing</span> commercial work, always focused
+					 on creating high-quality solutions and great user experiences.
 			</span
 				>
 			</h2>
@@ -72,7 +72,7 @@ import Copy from "../icons/Copy.astro";
 				<div id="mailButton">
 					<SocialPill href="#">
 						<Mail class="size-4 lg:size-6" />
-						pav.dev3@gmail.com
+						pablo93bio@gmail.com
 					</SocialPill>
 				</div>
 				<div
@@ -89,7 +89,7 @@ import Copy from "../icons/Copy.astro";
 		<SectionContainer id="experience">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Briefcase class="size-7" />
-				Experiencia
+				Experience
 			</h2>
 			<Experience />
 		</SectionContainer>
@@ -97,7 +97,7 @@ import Copy from "../icons/Copy.astro";
 		<SectionContainer id="skills">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<SkillsIcon class="size-7" />
-				Habilidades
+				Skills
 			</h2>
 			<Skills />
 		</SectionContainer>
@@ -105,7 +105,7 @@ import Copy from "../icons/Copy.astro";
 		<SectionContainer id="projects">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<Code class="size-7" />
-				Proyectos
+				Projects
 			</h2>
 			<Projects />
 		</SectionContainer>
@@ -119,8 +119,8 @@ import Copy from "../icons/Copy.astro";
 
 		if (mailButton) {
 			mailButton.addEventListener("click", () => {
-				const subject = encodeURIComponent("Contacto Portfolio");
-				const email = "pav.dev3@gmail.com";
+				const subject = encodeURIComponent("Portfolio Contact");
+				const email = "pablo93bio@gmail.com";
 				window.location.href = `mailto:${email}?subject=${subject}`;
 			});
 		}
@@ -128,14 +128,14 @@ import Copy from "../icons/Copy.astro";
 		if (copyButton) {
 			copyButton.addEventListener("click", () => {
 				navigator.clipboard
-					.writeText("pav.dev3@gmail.com")
+					.writeText("pablo93bio@gmail.com")
 					.then(() => {
 						alert(
-							"Email copiado al portapapeles\n pav.dev3@gmail.com",
+							"Email copied to clipboard\n pablo93bio@gmail.com",
 						);
 					})
 					.catch((err) => {
-						console.error("Error al copiar email: ", err);
+						console.error("Error copying email: ", err);
 					});
 			});
 		}

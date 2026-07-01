@@ -3,28 +3,28 @@ import { TAGS } from "../constants/Tags.js";
 import Tag from "./Tag.astro";
 const PROJECTS = [
     {
-        title: "Hexblem - Juego de Mesa",
-        description: `[En Desarrollo] Completamente multiplataforma, conectado a Firebase y una API en Node,
-             creado en Flutter usando el patrón BloC como gestor de estados.`,
+        title: "Hexblem - Board Game",
+        description: `[In Development] Fully multiplatform, connected to Firebase and a Node API,
+             built in Flutter using the BloC pattern for state management.`,
         link: "https://hexblem.netlify.app",
         github: null,
         image: "/projects/hexblem.webp",
         tags: [TAGS.FLUTTER, TAGS.SWIFT, TAGS.KOTLIN, TAGS.FIREBASE, TAGS.NODE],
     },
     {
-        title: "Baccus - TPV para CRM de Hoteles",
-        description: `[En Producción] Aplicación con muchísima funcionalidad para Android y Windows, usando 
-            Dart con C++ y Kotlin para crear PlatformChannels específicos. Está conectada a diferentes módulos de un backend en Java 
-            con Spring e Hibernate, con MySQL como Base de Datos, incluye diversos microservicios`,
+        title: "Baccus - POS for Hotel CRM",
+        description: `[In Production] Feature-rich application for Android and Windows, using
+            Dart with C++ and Kotlin to create specific PlatformChannels. It is connected to different modules of a Java backend
+            with Spring and Hibernate, uses MySQL as its database, and includes several microservices.`,
         link: null,
         github: null,
         image: "/projects/baccus.webp",
         tags: [TAGS.FLUTTER, TAGS.JAVA, TAGS.SPRING, TAGS.LINUX, TAGS.MYSQL],
     },
     {
-        title: "Illustrashop - App de Ventas",
-        description: `Creada en nativo para Android y Windows usando Kotlin Multiplatform y Node con MongoDBAtlas
-             para el backend y base de datos. Incluye pasarelas de pago con tarjeta e integraciones con PayPal y GooglePay`,
+        title: "Illustrashop - Sales App",
+        description: `Built natively for Android and Windows using Kotlin Multiplatform and Node with MongoDB Atlas
+             for the backend and database. Includes card payment gateways and integrations with PayPal and Google Pay.`,
         link: null,
         github: null,
         image: "/projects/illustrashop.webp",
@@ -77,14 +77,14 @@ const PROJECTS = [
             {link && (
                 <p class="text-lg mb-4">
                     <a href={link} target="_blank" class="project-link">
-                        Visítalo
+                        Visit it
                     </a>
                 </p>
             )}
             <img
                 class="project-image rounded shadow-2xl shadow-white/10"
                 src={image}
-                alt={`Captura de pantalla del proyecto ${title}`}
+                alt={`Screenshot of the ${title} project`}
             />
         </article>
     ))
