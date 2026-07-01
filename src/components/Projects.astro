@@ -4,9 +4,25 @@ import Tag from "./Tag.astro";
 const PROJECTS = [
     {
         title: "Hexblem - Board Game",
-        description: `[In Development] Fully multiplatform, connected to Firebase and a Node API,
+        description: `[Published on iOS and Android] Fully multiplatform, connected to Firebase and a Node API,
              built in Flutter using the BloC pattern for state management.`,
-        link: "https://hexblem.netlify.app",
+        link: null,
+        stores: [
+            {
+                platform: "iOS",
+                name: "App Store",
+                action: "Download on",
+                icon: "/pictures/apple-store.webp",
+                href: "https://apps.apple.com/es/app/hexblem/id6740856646?l=en-GB",
+            },
+            {
+                platform: "Android",
+                name: "Google Play",
+                action: "Get it on",
+                icon: "/pictures/google-play.webp",
+                href: "https://play.google.com/store/apps/details?id=com.unbeatablegames.hexblem&pcampaignid=web_share",
+            },
+        ],
         github: null,
         image: "/projects/hexblem.webp",
         tags: [TAGS.FLUTTER, TAGS.SWIFT, TAGS.KOTLIN, TAGS.FIREBASE, TAGS.NODE],
@@ -57,6 +73,83 @@ const PROJECTS = [
         text-decoration: underline; /* Underline on hover */
     }
 
+    .store-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 12px;
+        margin: 18px 0 4px;
+    }
+
+    .store-preview {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 10px;
+        padding: 12px 14px;
+        background: rgba(255, 255, 255, 0.06);
+        color: #ffffff;
+        text-decoration: none;
+        transition:
+            transform 0.2s,
+            border-color 0.2s,
+            background-color 0.2s;
+    }
+
+    .store-preview:hover,
+    .store-preview:focus-visible {
+        transform: translateY(-2px);
+        border-color: rgba(204, 142, 53, 0.8);
+        background: rgba(204, 142, 53, 0.14);
+        outline: none;
+    }
+
+    .store-icon {
+        display: inline-flex;
+        width: 44px;
+        height: 44px;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 12px;
+        background: rgba(255, 255, 255, 0.12);
+    }
+
+    .store-icon img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .store-copy {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .store-action {
+        display: block;
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 0.75rem;
+        line-height: 1;
+        margin-bottom: 4px;
+    }
+
+    .store-name {
+        display: block;
+        color: #ffffff;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.15;
+    }
+
+    .store-arrow {
+        color: rgba(255, 255, 255, 0.55);
+        font-size: 1.25rem;
+        line-height: 1;
+    }
+
     .project-image {
         border-radius: 12px; /* Rounded corners for image */
         margin-top: 16px; /* Space between text and image */
@@ -65,7 +158,7 @@ const PROJECTS = [
 </style>
 
 {
-    PROJECTS.map(({ title, description, tags, image, link }) => (
+    PROJECTS.map(({ title, description, tags, image, link, stores }) => (
         <article class="project-card pb-10 mt-6 mb-4">
             <h3 class="text-2xl font-semibold mb-2 mt-2">{title}</h3>
             <p class="text-lg mb-4 text-pretty opacity-80">{description}</p>
@@ -80,6 +173,27 @@ const PROJECTS = [
                         Visit it
                     </a>
                 </p>
+            )}
+            {stores && (
+                <div class="store-grid" aria-label={`${title} store links`}>
+                    {stores.map((store) => (
+                        <a
+                            href={store.href}
+                            target="_blank"
+                            rel="noopener"
+                            class="store-preview"
+                        >
+                            <span class="store-icon">
+                                <img src={store.icon} alt={`${store.platform} icon`} loading="lazy" />
+                            </span>
+                            <span class="store-copy">
+                                <span class="store-action">{store.action}</span>
+                                <span class="store-name">{store.name}</span>
+                            </span>
+                            <span class="store-arrow" aria-hidden="true">→</span>
+                        </a>
+                    ))}
+                </div>
             )}
             <img
                 class="project-image rounded shadow-2xl shadow-white/10"
