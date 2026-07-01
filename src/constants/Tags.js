@@ -1,6 +1,7 @@
 import Angular from "../icons/Angular.astro";
 import AstroIcon from "../icons/AstroIcon.astro";
 import CSharp from "../icons/CSharp.astro";
+import Code from "../icons/Code.astro";
 import Compose from "../icons/Compose.astro";
 import Critic from "../icons/Critic.astro";
 import Css from "../icons/Css.astro";
@@ -52,14 +53,23 @@ export const TAGS = {
     SPRING: {name: "Spring", icon: Spring},
     EXPRESS: {name: "Express", icon: Express},
     ASTRO: {name: "Astro", icon: AstroIcon},
+    CLEANARCH: {name: "Clean Architecture", icon: Code},
+    MVVM: {name: "MVVM / MVI", icon: Code},
     FLEXIBILITY: {name: "Flexibility and Adaptability", icon: Flexibility},
     TEAMWORK: {name: "Teamwork", icon: Team},
+    LEADERSHIP: {name: "Technical Leadership", icon: Team},
+    MENTORING: {name: "Mentoring", icon: Learn},
+    CLIENTCOMM: {name: "Client Communication", icon: Team},
+    OWNERSHIP: {name: "Ownership", icon: Iniciative},
     INITIATIVE: {name: "Proactivity", icon: Iniciative},
     CRITIC: {name: "Critical Thinking", icon: Critic},
     PROBLEMRES: {name: "Problem Solving", icon: ProblemResolution},
     LEARN: {name: "Always Learning", icon: Learn},
     GIT: {name: "Git", icon: Git},
     GITHUB: {name: "Github", icon: GitHub},
+    GITHUBACTIONS: {name: "GitHub Actions", icon: GitHub},
+    AZUREDEVOPS: {name: "Azure DevOps", icon: Docker},
+    CICD: {name: "CI/CD", icon: Docker},
     LINUX: {name: "Bash - Zsh", icon: Linux},
     POWERSHELL: {name: "PowerShell", icon: Powhershell},
     DOCKER: {name: "Docker", icon: Docker},

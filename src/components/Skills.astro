@@ -1,85 +1,79 @@
 ---
 import { TAGS } from "../constants/Tags.js";
 import Tag from "./Tag.astro";
-const LANGUAGE_SKILLS = [
-    TAGS.DART,
-    TAGS.JAVA,
-    TAGS.KOTLIN,
-    TAGS.JAVASCRIPT,
-    TAGS.TYPESCRIPT,
-    TAGS.CSHARP,
-    TAGS.SWIFT,
-];
-const FRAMEWRK_SKILLS = [
+const MOBILE_SKILLS = [
     TAGS.FLUTTER,
-    TAGS.ANGULAR,
-    TAGS.REACT,
-    TAGS.ASTRO,
+    TAGS.DART,
+    TAGS.KOTLIN,
     TAGS.COMPOSE,
     TAGS.SWIFTUI,
+    TAGS.SWIFT,
+    TAGS.FIREBASE,
+];
+const ARCHITECTURE_SKILLS = [
+    TAGS.CLEANARCH,
+    TAGS.MVVM,
+    TAGS.NODE,
+    TAGS.TYPESCRIPT,
     TAGS.SPRING,
     TAGS.EXPRESS,
-    TAGS.TAILWIND,
-];
-const SOCIALSF_SKILLS = [
-    TAGS.FLEXIBILITY,
-    TAGS.TEAMWORK,
-    TAGS.INITIATIVE,
-    TAGS.CRITIC,
-    TAGS.PROBLEMRES,
-    TAGS.LEARN,
-];
-const SOFTWARE_SKILLS = [
     TAGS.MYSQL,
     TAGS.MONGODB,
+];
+const DEVOPS_SKILLS = [
     TAGS.DOCKER,
+    TAGS.GITHUBACTIONS,
+    TAGS.AZUREDEVOPS,
+    TAGS.CICD,
     TAGS.LINUX,
-    TAGS.POWERSHELL,
-    TAGS.FIREBASE,
-    TAGS.HTML,
-    TAGS.CSS,
-    TAGS.DENO,
-    TAGS.NODE,
     TAGS.GIT,
     TAGS.GITHUB,
+];
+const LEADERSHIP_SKILLS = [
+    TAGS.LEADERSHIP,
+    TAGS.MENTORING,
+    TAGS.CLIENTCOMM,
+    TAGS.OWNERSHIP,
+    TAGS.PROBLEMRES,
+    TAGS.TEAMWORK,
 ];
 ---
 
 <div class="text-white">
-    <h3 class="text-xl font-semibold my-2 pt-6">Languages</h3>
+    <h3 class="text-xl font-semibold my-2 pt-6">Mobile</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
-            LANGUAGE_SKILLS.map((skill) => (
+            MOBILE_SKILLS.map((skill) => (
                 <Tag name={skill.name}>
                     <skill.icon class="size-5 text-white" />
                 </Tag>
             ))
         }
     </ul>
-    <h3 class="text-xl font-semibold my-2 pt-12">Frameworks</h3>
+    <h3 class="text-xl font-semibold my-2 pt-12">Architecture & Backend</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
-            FRAMEWRK_SKILLS.map((skill) => (
+            ARCHITECTURE_SKILLS.map((skill) => (
                 <Tag name={skill.name}>
                     <skill.icon class="size-5" />
                 </Tag>
             ))
         }
     </ul>
-    <h3 class="text-xl font-semibold my-2 pt-12">Soft Skills</h3>
+    <h3 class="text-xl font-semibold my-2 pt-12">DevOps & Delivery</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
-            SOCIALSF_SKILLS.map((skill) => (
+            DEVOPS_SKILLS.map((skill) => (
                 <Tag name={skill.name}>
                     <skill.icon class="size-5" />
                 </Tag>
             ))
         }
     </ul>
-    <h3 class="text-xl font-semibold my-2 pt-12">Other</h3>
+    <h3 class="text-xl font-semibold my-2 pt-12">Leadership</h3>
     <ul class="flex gap-x-4 flex-row flex-wrap">
         {
-            SOFTWARE_SKILLS.map((skill) => (
+            LEADERSHIP_SKILLS.map((skill) => (
                 <Tag name={skill.name}>
                     <skill.icon class="size-5" />
                 </Tag>

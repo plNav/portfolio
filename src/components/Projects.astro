@@ -4,8 +4,11 @@ import Tag from "./Tag.astro";
 const PROJECTS = [
     {
         title: "Hexblem - Board Game",
-        description: `[Published on iOS and Android] Fully multiplatform, connected to Firebase and a Node API,
-             built in Flutter using the BloC pattern for state management.`,
+        description: `Demo mobile board game published on iOS and Android, built with Flutter using the BloC pattern,
+            local persistence, shaders, and platform channels. Automated distribution runs through GitHub Actions CI/CD,
+            running unit and end-to-end integration tests as part of the deployment flow. Clean architecture makes services
+            easy to swap and inspect. Firebase and Node.js are used only for
+            debug backend flows.`,
         link: null,
         stores: [
             {
@@ -29,9 +32,8 @@ const PROJECTS = [
     },
     {
         title: "Baccus - POS for Hotel CRM",
-        description: `[In Production] Feature-rich application for Android and Windows, using
-            Dart with C++ and Kotlin to create specific PlatformChannels. It is connected to different modules of a Java backend
-            with Spring and Hibernate, uses MySQL as its database, and includes several microservices.`,
+        description: `Production POS and CRM ecosystem for hotels, built for Android and Windows with Flutter, Java,
+            Spring, Hibernate, MySQL, microservices, and platform-specific integrations.`,
         link: null,
         github: null,
         image: "/projects/baccus.webp",
@@ -39,8 +41,8 @@ const PROJECTS = [
     },
     {
         title: "Illustrashop - Sales App",
-        description: `Built natively for Android and Windows using Kotlin Multiplatform and Node with MongoDB Atlas
-             for the backend and database. Includes card payment gateways and integrations with PayPal and Google Pay.`,
+        description: `Sales application built with Kotlin Multiplatform, Node.js, MongoDB Atlas, card payment gateways,
+             PayPal, and Google Pay integrations.`,
         link: null,
         github: null,
         image: "/projects/illustrashop.webp",
